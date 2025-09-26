@@ -11,6 +11,7 @@ import { jsonConfigLoader } from 'config/json-config.loader'; */
 import { plainToClass } from 'class-transformer';
 import { ConfigSchema } from 'config/config.schema';
 import { validate } from 'class-validator'; */
+import { ChatModule } from './modules/chat/chat.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { validate } from 'class-validator'; */
       logging: true, // 开启日志，打印 SQL 语句
     }),
     UserModule,
+    ChatModule,
   ],
   controllers: [AppController],
   providers: [AppService],
